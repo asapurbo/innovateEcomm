@@ -106,13 +106,13 @@ export default {
       // Border Radius End
       // Back Ground Image Start
       backgroundImage: {
-        homeBanner: "url('src/assets/homebanner.png')",
-        homeAbout: "url('src/assets/homeaboutbg.png')",
-        counterBg: "url('src/assets/counterbg.png')",
-        projectBg: "url('src/assets/projectbg.png')",
-        primaryBg: "url('src/assets/primarybg.png')",
-        secondaryBg: "url('src/assets/secondarybg.png')",
-        interBg: "url('src/assets/interbg.png')",
+        homeBanner: "url('./src/assets/homebanner.png')",
+        homeAbout: "url('./src/assets/homeaboutbg.png')",
+        counterBg: "url('./src/assets/counterbg.png')",
+        projectBg: "url('./src/assets/projectbg.png')",
+        primaryBg: "url('./src/assets/primarybg.png')",
+        secondaryBg: "url('./src/assets/secondarybg.png')",
+        interBg: "url('./src/assets/interbg.png')",
       },
       // Back Ground Image End
       //Box Shadow Start
