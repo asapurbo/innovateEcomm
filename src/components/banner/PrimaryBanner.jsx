@@ -8,7 +8,7 @@ const PrimaryBanner = ({ className, headTxt, paraTxt, children }) => {
 
   return (
     <section
-      className={`bg-primaryBg bg-center bg-cover pt-36 pb-s120 ${className}`}
+      className={`bg-primaryBg bg-center bg-cover py-40 ${className}`}
     >
       <Container>
         <div>{children}</div>

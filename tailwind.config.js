@@ -112,7 +112,7 @@ export default {
         projectBg: "url('../src/assets/projectbg.png')",
         primaryBg: "url('../src/assets/primarybg.png')",
         secondaryBg: "url('../src/assets/secondarybg.png')",
-        interBg: "url('./src/assets/interbg.png')",
+        interBg: "url('./src/assets/intbg.png')",
       },
       // Back Ground Image End
       //Box Shadow Start
