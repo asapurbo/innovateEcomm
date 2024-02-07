@@ -1,0 +1,40 @@
+.animation {
+  width: 244px;
+  height: 68px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 0;
+  background: #fff;
+  transition: all 0.5s ease;
+}
+
+.portfolioWrap > li:nth-child(1):hover ~ .animation {
+  background: white;
+  border-radius: 0 5px 5px 0;
+}
+.portfolioWrap > li:nth-child(2):hover ~ .animation {
+  width: 220px;
+  left: 261px;
+  background: #fff;
+}
+.portfolioWrap > li:nth-child(3):hover ~ .animation {
+  width: 214px;
+  left: 495px;
+  background: white;
+}
+.portfolioWrap > li:nth-child(4):hover ~ .animation {
+  width: 220px;
+  left: 723px;
+  background: #fff;
+}
+.portfolioWrap > li:nth-child(5):hover ~ .animation {
+  width: 249px;
+  left: 959px;
+  background: #fff;
+}
+.portfolioWrap > li:nth-child(6):hover ~ .animation {
+  width: 186px;
+  left: 1222px;
+  background: #fff;
+}
