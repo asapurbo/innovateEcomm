@@ -1,4 +1,4 @@
-import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import { createBrowserRouter, RouterProvider,rootLoader } from "react-router-dom";
 import Root from './components/rootLayout/Root';
 import Home from './components/pages/Home';
 import About from './components/pages/About';
@@ -13,6 +13,7 @@ const App = () => {
   const router = createBrowserRouter([
     {
       element: <Root/>,
+      loader: rootLoader,
       children: [
         {
           path: "/",
