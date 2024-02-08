@@ -5,7 +5,7 @@ import Image from "../commonComponent/Image";
 import design from '../../assets/design.png'
 const SecondaryBanner = ({ children, headTxt, paraTxt }) => {
   return (
-    <section className="bg-secondaryBg py-s120 pb-s120 relative">
+    <section className="bg-secondaryBg py-s120 pb-s120 bg-center bg-cover h-screen">
       <Container>
         <div className="w-s709 mx-auto">
           <div>{children}</div>

@@ -3,7 +3,7 @@ import SecondrayHeading from "../commonComponent/SecondaryHeading";
 
 const IntermediateBanner = ({children ,headTxt}) => {
   return (
-    <section className='pt-s199 pb-s296 bg-intbg bg-center bg-cover'>
+    <section className='pt-s199 pb-s296 bg-intbg bg-center bg-cover h-screen'>
         <Container>
         <div className="w-s709 mx-auto">
           <div>{children}</div>

@@ -5,21 +5,13 @@ import LinkList from "../commonComponent/LinkList";
 import PrimaryButton from "../commonComponent/PrimaryButton";
 import { FaArrowDown, FaArrowUp } from "react-icons/fa6";
 import useNavClick from "../hook/useNavClick";
+import NavData from "../data/NavData";
 
 const Nav = () => {
   const { upHandelClick, downHandelClick, navRef, downRef, upRef } =
     useNavClick();
+  const { navLink: navLink, handleDispatch:handleClick } = NavData();
 
-  //  Nav Link Start
-  const navLink = [
-    { text: "Home", to: "/" },
-    { text: "About", to: "/about" },
-    { text: "Service", to: "/service" },
-    { text: "Portfolio", to: "/portfolio" },
-    { text: "Price", to: "/price" },
-    { text: "Blog", to: "/blog" },
-  ];
-  //  Nav Link End
   return (
     <nav
       ref={navRef}
@@ -34,12 +26,19 @@ const Nav = () => {
           <div className="w-8/12">
             <ul className="flex items-center justify-center gap-x-8">
               {navLink.map((item, index) => (
-                <LinkList key={index} text={item.text} to={item.to} />
+                <LinkList
+                  key={index}
+                  text={item.text}
+                  to={item.to}
+                  handleClick={item.handleClick}
+                />
               ))}
             </ul>
           </div>
           <div className="w-2/12">
-            <PrimaryButton to='/contact' text="Contact Us" />
+            <PrimaryButton to="/contact" text="Contact Us" handleClick={function() {
+              handleClick("Contact Us")
+            }} />
           </div>
         </Flex>
       </Container>
@@ -52,7 +51,7 @@ const Nav = () => {
         ref={downRef}
         className="fixed bottom-7 rounded-full duration-300 shadow-inner right-5"
       >
-        <div className="w-16 h-16 z-10 bg-pdBg duration-300 hover:bg-secondaryColor text-3xl flex justify-center items-center text-white rounded-full shadow-2xl  cursor-pointer">
+        <div className="w-16 h-16 z-[999999999] relative bg-pdBg duration-300 hover:bg-secondaryColor text-3xl flex justify-center items-center text-white rounded-full shadow-2xl  cursor-pointer">
           <FaArrowDown />
         </div>
       </div>
@@ -64,7 +63,7 @@ const Nav = () => {
         }}
         className="hidden fixed shadow-inner duration-300 rounded-full bottom-28 right-5"
       >
-        <div className="w-16 h-16 hover:bg-secondaryColor bg-[#f9b8a0] duration-300 cursor-pointer text-3xl flex justify-center items-center text-white rounded-full shadow-2xlcursor-pointer">
+        <div className="w-16 h-16 z-[999999999999] relative hover:bg-secondaryColor bg-[#f9b8a0] duration-300 cursor-pointer text-3xl flex justify-center items-center text-white rounded-full shadow-2xlcursor-pointer">
           <FaArrowUp />
         </div>
       </div>
